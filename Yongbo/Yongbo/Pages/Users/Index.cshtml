@@ -1,0 +1,38 @@
+﻿@page
+@model Yongbo.Pages.Users.IndexModel
+@{
+}
+<h2>Users List</h2>
+
+@if (Model.Listusers != null && Model.Listusers.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Listusers)
+            {
+                <tr>
+                    <td>@user.ID</td>
+                    <td>@user.Fname</td>
+                    <td>@user.Lname</td>
+                    <td>@user.Email</td>
+                    <td>@user.password</td>
+                    <td>@user.Date</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No users found.</p>
+}
