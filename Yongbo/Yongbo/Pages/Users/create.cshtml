@@ -2,3 +2,36 @@
 @model Yongbo.Pages.Users.createModel
 @{
 }
+@if(Model.showerror.Length > 0 ){
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<strong>@Model.showerror</strong>
+		<button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+	</div>
+}
+@if (Model.showinfo.Length > 0)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@Model.showinfo</strong>
+        <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+    </div>
+}
+<form method="post">
+    <!-- First Name -->
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br><br>
+
+    <!-- Last Name -->
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+    <!-- Submit Button -->
+    <button type="submit">Register</button>
+</form>
