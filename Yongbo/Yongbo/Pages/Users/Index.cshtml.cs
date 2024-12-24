@@ -6,17 +6,17 @@ namespace Yongbo.Pages.Users
 {
     public class IndexModel : PageModel
     {
-        private readonly IConfiguration connection1;
-        public List<users> Listusers = new List<users>(); 
-        public IndexModel(IConfiguration connection1)
+        private readonly IConfiguration conn1;
+        public List<users> Listusers1 = new List<users>();
+        public IndexModel(IConfiguration conn2)
         {
-            this.connection1 = connection1;
+            conn1 = conn2;
         }
 
         public void OnGet()
         {
             Dal dal = new Dal();
-            Listusers = dal.Getusers(connection1);
+            Listusers1 = dal.Getusers(conn1);
 
         }
     }

@@ -4,8 +4,8 @@
 }
 <h2>Users List</h2>
 
-@if (Model.Listusers != null && Model.Listusers.Count > 0)
-{
+ @* @if (Model.Listusers1 != null && Model.Listusers1.Count > 0) *@
+
     <table class="table">
         <thead>
             <tr>
@@ -18,21 +18,17 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var user in Model.Listusers)
+            @foreach (var item in Model.Listusers1)
             {
                 <tr>
-                    <td>@user.ID</td>
-                    <td>@user.Fname</td>
-                    <td>@user.Lname</td>
-                    <td>@user.Email</td>
-                    <td>@user.password</td>
-                    <td>@user.Date</td>
+                    <td>@item.ID</td>
+                    <td>@item.Fname</td>
+                    <td>@item.Lname</td>
+                    <td>@item.Email</td>
+                    <td>@item.password</td>
+                    <td>@item.Date23</td>
                 </tr>
             }
         </tbody>
     </table>
-}
-else
-{
-    <p>No users found.</p>
-}
+

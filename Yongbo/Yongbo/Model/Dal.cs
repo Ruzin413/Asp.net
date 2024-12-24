@@ -21,7 +21,7 @@ namespace Yongbo.Model
                         u1.Lname = Convert.ToString(dt.Rows[i]["Lname"]);
                         u1.Email = Convert.ToString(dt.Rows[i]["Email"]);
                         u1.password = Convert.ToString(dt.Rows[i]["Password1"]);
-                        u1.Date = Convert.ToString(dt.Rows[i]["Date1"]);
+                        u1.Date23 = Convert.ToString(dt.Rows[i]["Date1"]);
                         Listusers.Add(u1);
                     }
                 }
