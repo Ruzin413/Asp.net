@@ -16,6 +16,8 @@
                 <th>Email</th>
                 <th>Password</th>
                 <th>date</th>
+                <th>edit</th>
+                <th>delete</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +30,13 @@
                     <td>@item.Email</td>
                     <td>@item.password</td>
                     <td>@item.Date23</td>
+                <td>
+                    <a href="/Users/Edit?id=@item.ID" class="btn btn-info">Edit</a>
+                </td>
+                <td>
+                    <a href="/Users/delete?id=@item.ID" class="btn btn-danger">Delete</a>
+                </td>
+                
                 </tr>
             }
         </tbody>
