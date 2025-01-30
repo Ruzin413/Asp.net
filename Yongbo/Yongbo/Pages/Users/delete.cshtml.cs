@@ -7,6 +7,7 @@ namespace Yongbo.Pages.Users
     public class deleteModel : PageModel
     {
         public users u1 = new users();
+        public int IDD = 0;
         public String showerror = String.Empty;
         public readonly IConfiguration configuration;
         public deleteModel(IConfiguration configuration)
@@ -15,11 +16,11 @@ namespace Yongbo.Pages.Users
         }
         public void OnGet()
         {
-            u1.ID = Convert.ToInt32( Request.Query["id"]);
+           IDD = Convert.ToInt32( Request.Query["id"]);
             try
             {
                 delete1 d1 = new delete1();
-                d1.userdelete(u1, configuration);
+                d1.userdelete(IDD, configuration);
             }
             catch (Exception ex) {
                 showerror = $"Unable to fetch data: {ex.Message}";

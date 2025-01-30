@@ -5,8 +5,9 @@ namespace Yongbo.Pages
 {
     public class IndexModel : PageModel
     {
+        public String Name;
         private readonly ILogger<IndexModel> _logger;
-
+        
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -14,7 +15,7 @@ namespace Yongbo.Pages
 
         public void OnGet()
         {
-
+            Session[Name] = "Hello";
         }
     }
 }
